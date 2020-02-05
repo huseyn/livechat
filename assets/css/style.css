@@ -1,5 +1,8 @@
 /*Box part*/
 
+.nonvisible{
+    visibility: hidden;
+}
 .box {
     width: 20%;
     height: 50px;
