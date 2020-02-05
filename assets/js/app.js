@@ -42,6 +42,7 @@ const addMessageHandler = () => {
     li.innerHTML =innerText;
 
     ul.append(li);
+    chatInput.value ='';
 }
 
 chatInput.addEventListener('keyup', function (e) {
