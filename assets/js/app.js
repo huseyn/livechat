@@ -17,39 +17,35 @@ const getInput = () => {
 
 const addMessageHandler = () => {
     const message = getInput();
-    let image = '';
     let innerText = '';
     const li = document.createElement('li');
     const ul = document.getElementById('chatList');
 
-    if(message.match(new RegExp(/^[A-Z]/)) !== null){
+    if (message.match(new RegExp(/^[A-Z]/)) !== null) {
         li.className = 'left';
-        image = 'operator';
-        innerText =` 
-        <img src="assets/images/${image}.jpg" alt="">
+        innerText = ` 
+        <img src="assets/images/operator.jpg" alt="">
         <p>${message}</p>
         `;
-    }else{
+    } else {
         li.className = 'right';
-        image = 'user';
-        innerText =` 
+        innerText = ` 
         <p>${message}</p>
-        <img src="assets/images/${image}.jpg" alt="">
+        <img src="assets/images/user.jpg" alt="">
         `;
     }
 
-
-    li.innerHTML =innerText;
+    li.innerHTML = innerText;
 
     ul.append(li);
-    chatInput.value ='';
+    chatInput.value = '';
 }
 
 chatInput.addEventListener('keyup', function (e) {
     if (e.keyCode === 13) {
         addMessageHandler();
-    const chatList = document.getElementById('chatList');    
-    chatList.scrollTop = chatList.scrollHeight;
+        const chatList = document.getElementById('chatList');
+        chatList.scrollTop = chatList.scrollHeight;
 
     }
 });
