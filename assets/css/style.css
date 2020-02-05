@@ -18,6 +18,14 @@
     margin-right: 25%;
 }
 
+.placed-left{
+    float:left;
+}
+
+.placed-right{
+    float: right;
+}
+
 .items {
     margin: auto;
     width: 100%;
@@ -142,12 +150,4 @@ input {
     color: #fff;
     font-size: 30px;
     padding-top: 5px;
-}
-
-
-.test1{
-    float:left;
-}
-.test2{
-    float:right;
 }
